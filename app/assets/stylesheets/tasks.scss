@@ -1,0 +1,21 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.fa {
+  color: grey;
+}
+
+.wrapper {
+
+display: flex;
+height: 100vh;
+  background-color: #C7D3DD
+}
+.container {
+
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  }

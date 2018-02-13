@@ -1,0 +1,30 @@
+<div class="container">
+
+      <h1> Available tasks </h1>
+      <ul class="list-group">
+        <% @tasks.each do |task| %>
+
+        <%= link_to task_path(task) do %>
+        <li class="list-group-item d-flex justify-content-between align-top">
+          <%= task.title %>
+          <%= link_to edit_task_path(task) do %>
+          <i class="fas fa-edit"></i>
+          <% end %>
+          <%= link_to  do %>
+          <% if task.completed %>
+          <i class="fas fa-check-square"></i>
+          <% else %>
+          <i class="fas fa-square"></i>
+          <% end %>
+          <% end %>
+          <%= link_to destroy_task_path(task), method: :delete do %>
+          <i class="fas fa-trash"></i>
+          <% end %>
+        </li>
+        <% end %>
+
+        <% end %>
+      </ul>
+      <%= link_to 'Add a new task', new_task_path %>
+
+</div>

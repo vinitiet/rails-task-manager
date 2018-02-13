@@ -1,0 +1,23 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-8 col-xs-offset-2">
+        <h1> Task details: <%= @task.title %> </h1>
+
+
+        <p>
+          <%= @task.details %>
+          <% if @task.completed %>
+          <i class="fa fa-check-square"></i>
+          <% else %>
+          <i class="fa fa-square"></i>
+          <% end %>
+        </p>
+        <%= link_to "Edit", edit_task_path(@task) %>
+        <%= link_to "back to tasks", tasks_path %>
+
+      </div>
+    </div>
+
+  </div>
+</div>
